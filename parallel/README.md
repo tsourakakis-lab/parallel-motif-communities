@@ -19,9 +19,15 @@ To run
 ```
 bazel run //benchmarks/community/wt:Thresholding_main -- -rounds 1 -community absolute/path/to/groundtruth/community -method METHOD -threshold DELTA -s absolute/path/to/graph/adj
 ```
+Parameters: 
+- **rounds** set the number of repetitions.
+- **method**, TW, TECTONIC, JACCARD and K3.
+- **threshold** the delta value.
+- **-s** indicating the input graph is symmetric.
+
 For example, the following command runs TW on DBLP with threshold -15
 ```
-bazel-3.7.0 run //benchmarks/community/wt:Thresholding_main -- -rounds 1 -community path_to_root/large_graphs/dblp.all -method WT -threshold -15.0 -s path_to_root/large_graphs/dblp.adj
+bazel-3.7.0 run //benchmarks/community/wt:Thresholding_main -- -rounds 1 -community path_to_root/large_graphs/dblp.all -method TW -threshold -15.0 -s path_to_root/large_graphs/dblp.adj
 ```
 Available motif-based similarity methods are: TW, TECTONIC, JACCARD and K3.
 
