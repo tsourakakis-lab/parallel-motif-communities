@@ -21,6 +21,7 @@ bazel run //benchmarks/community/wt:Thresholding_main -- -rounds 1 -community ab
 ```
 Parameters: 
 - **rounds** set the number of repetitions.
+- **community** groundtruth community file.
 - **method**, TW, TECTONIC, JACCARD and K3.
 - **threshold** the delta value.
 - **-s** indicating the input graph is symmetric.
